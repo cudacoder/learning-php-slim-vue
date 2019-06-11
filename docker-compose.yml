@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  app:
+    build: build/php
+    working_dir: /var/www/html
+    command: php -S 0.0.0.0:8080 -t public
+    environment:
+      - dev=true
+      - PHP_IDE_CONFIG=serverName=Local-Dev
+      - XDEBUG_CONFIG=remote_host=host.docker.internal remote_port=9000 remote_enable=1 idekey=PHPSTORM remote_log=/tmp/xdebug.console.log
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/var/www/html:consistent
+      - /var/run/docker.sock:/var/run/docker.sock

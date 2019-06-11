@@ -1,0 +1,8 @@
+/.idea/
+/logs/*
+/vendor/
+/public/app.js
+/node_modules/
+!/logs/README.md
+terraform/.terraform
+terraform/terraform.tfstate.*
