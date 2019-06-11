@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gvw
- * Date: 1/22/2018
- * Time: 10:52 AM
- */
 
 namespace App\dto;
 
