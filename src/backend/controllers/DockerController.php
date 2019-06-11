@@ -4,18 +4,18 @@
 namespace App\controllers;
 
 use Aws\Sdk;
-use App\dto\ContainerDefinitionDto;
-use App\dto\LogConfigurationDto;
-use App\dto\TaskDefinitionDto;
-use App\models\AwsProfile;
-use App\models\Task;
-use Doctrine\ORM\EntityManager;
 use Exception;
-use Psr\Container\ContainerInterface;
+use App\models\Task;
 use Slim\Http\Request;
 use Slim\Http\Response;
-use Symfony\Component\Process\Exception\ProcessFailedException;
+use App\models\AwsProfile;
+use App\dto\TaskDefinitionDto;
+use Doctrine\ORM\EntityManager;
+use App\dto\LogConfigurationDto;
+use App\dto\ContainerDefinitionDto;
+use Psr\Container\ContainerInterface;
 use Symfony\Component\Process\Process;
+use Symfony\Component\Process\Exception\ProcessFailedException;
 
 class DockerController {
 

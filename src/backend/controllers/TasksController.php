@@ -3,10 +3,10 @@
 namespace App\controllers;
 
 use App\models\Task;
-use Doctrine\ORM\EntityManager;
-use Doctrine\ORM\ORMException;
 use Slim\Http\Request;
 use Slim\Http\Response;
+use Doctrine\ORM\ORMException;
+use Doctrine\ORM\EntityManager;
 use Psr\Container\ContainerInterface;
 
 class TasksController {
