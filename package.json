@@ -24,7 +24,7 @@
     "cross-env": "^1.0.6",
     "envify": "^3.4.1",
     "http-server": "^0.11.1",
-    "node-sass": "^4.10.0",
+    "node-sass": "^4.13.1",
     "npm-run-all": "^2.1.2",
     "uglify-js": "^2.5.0",
     "vueify": "^9.1.0",
