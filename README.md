@@ -1,8 +1,8 @@
-# learning-php-slim-vue
+# Simple PHP, Slim 3 and Vue.js App
 
 ![App's Homepage](docs/slim-vue.png)
 
-A simple project which contains a PHP API server built using the Slim3 framework skeleton and a complete Vue.js app communicating with said server.
+A simple project which contains a PHP API server built using the Slim 3 framework and a complete Vue.js app communicating with said server.
 
 This project uses Docker to setup its development environment, and the Vue UI enables you to build Docker images using the `docker.sock` bind trick (I will add more on this later on, in the meantime please look in the `docker-compose.yml` file for more details).  
 It even allows you to enter your AWS profile details (which are saved to a local SQLite database) and use them to perform several AWS ECS related tasks.
