@@ -1,6 +1,6 @@
 {
-  "name": "cudacoder/learning-php-slim-vue",
-  "description": "A tutorial project for a PHP Slim + Vue.js app.",
+  "name": "kutacoder/simple-php-slim-vue",
+  "description": "A tutorial project for a PHP + Slim for the server and Vue.js in the client.",
   "license": "GPL-3.0",
   "require": {
     "php": ">=7.1",
@@ -17,11 +17,11 @@
     "symfony/filesystem": "^4.1"
   },
   "require-dev": {
-    "phpunit/phpunit": "^7"
+    "phpunit/phpunit": "^8"
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "tests/",
+      "Tests\\": "src/backend/tests/",
       "App\\": "src/backend/"
     }
   },
@@ -29,7 +29,8 @@
     "process-timeout": 0
   },
   "scripts": {
-    "test": "phpunit --testdox",
-    "init-db": "doctrine o:s:c"
+    "test": "phpunit --bootstrap vendor/autoload.php src/backend/tests",
+    "init-db": "doctrine o:s:c",
+    "dev": "php -S localhost:8080 -t public"
   }
 }

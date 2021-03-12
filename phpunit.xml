@@ -1,7 +1,0 @@
-<phpunit bootstrap="vendor/autoload.php">
-    <testsuites>
-        <testsuite name="Docker Commands">
-            <directory>tests/Unit</directory>
-        </testsuite>
-    </testsuites>
-</phpunit>

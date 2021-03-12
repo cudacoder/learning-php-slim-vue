@@ -1,13 +1,11 @@
 {
-  "name": "learning-php-slim-vue",
+  "name": "simple-php-slim-vue",
   "description": "A tutorial project for a PHP Slim + Vue.js app.",
   "license": "GPL-3.0",
-  "author": "cudacoder",
+  "author": "kutacoder",
   "private": true,
   "scripts": {
-    "dev": "npm-run-all --parallel watch slim",
-    "slim": "set COMPOSE_CONVERT_WINDOWS_PATHS=1 && docker-compose up",
-    "watch": "watchify -vd -p browserify-hmr -e src/frontend/main.js -o public/app.js",
+    "dev": "watchify -vd -p browserify-hmr -e src/frontend/main.js -o public/app.js",
     "build": "cross-env NODE_ENV=production browserify -g envify -e src/frontend/main.js | uglifyjs -c warnings=false -m > public/app.js"
   },
   "dependencies": {

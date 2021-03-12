@@ -8,10 +8,12 @@ use Slim\Http\Response;
 use Slim\Http\Environment;
 use PHPUnit\Framework\TestCase;
 
+define('DS', DIRECTORY_SEPARATOR);
+
 /**
  * Base class for all Slim tests
  */
-class BaseTest extends TestCase {
+class BaseTestCase extends TestCase {
 
     /**
      * Use middleware when running application?
@@ -25,19 +27,20 @@ class BaseTest extends TestCase {
      */
     protected $app;
 
-    public function setUp() {
+    public function setUp(): void {
         // Use the application settings
-        $settings = require __DIR__ . '/../src/backend/config/settings.php';
+        $settings = require __DIR__ . '/../config/settings.php';
         // Instantiate the application
-        $this->app = new App($settings);
+        $app = new App($settings);
+        $this->app = $app;
         // Set up dependencies
-        require __DIR__ . '/../src/backend/config/dependencies.php';
+        require __DIR__ . '/../config/dependencies.php';
         // Register middleware
         if ($this->withMiddleware) {
-            require __DIR__ . '/../src/backend/config/middleware.php';
+            require __DIR__ . '/../config/middleware.php';
         }
         // Register routes
-        require __DIR__ . '/../src/backend/config/routes.php';
+        require __DIR__ . '/../config/routes.php';
     }
 
     /**

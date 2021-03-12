@@ -2,13 +2,13 @@
 
 namespace Tests\Unit;
 
-use Tests\BaseTest;
+use Tests\BaseTestCase;
 
 /**
  * Class ApiControllerTest
  * @package Tests\Unit
  */
-class ApiControllerTest extends BaseTest {
+class ApiControllerTest extends BaseTestCase {
 
     /**
      * @throws \Slim\Exception\MethodNotAllowedException
